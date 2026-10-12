@@ -1,0 +1,194 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(14, 15, 20, 0.55);
+}
+
+.modal {
+  position: relative;
+  width: min(100%, 704px);
+  min-height: 274px;
+  padding: 2.5rem 4rem;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.2);
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.8rem;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #777;
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  align-items: center;
+  gap: 5.75rem;
+  min-height: 192px;
+}
+
+.imageBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 190px;
+
+  img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+  }
+}
+
+.content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h3 {
+    margin: 0 0 0.4rem;
+    color: #454545;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+}
+
+.price {
+  color: #414141;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.description {
+  max-width: 290px;
+  margin: 1.45rem 0 0;
+  color: #999;
+  font-size: 0.58rem;
+  letter-spacing: 0.045em;
+  line-height: 1.5;
+}
+
+.detailsLink {
+  display: block;
+  margin: 0.2rem 0 1.7rem;
+  padding: 0;
+  color: #3745b5;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.actions {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.quantityControl {
+  display: flex;
+  flex: 0 0 101px;
+  height: 34px;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  color: #26204f;
+
+  button {
+    width: 28px;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #26204f;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  span {
+    min-width: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+}
+
+.primaryButton {
+  min-width: 0;
+  flex: 1 1 auto;
+  height: 34px;
+  padding: 0 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: #ffca05;
+  color: #20183d;
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 680px) {
+  .modal {
+    width: min(100%, 420px);
+    min-height: 0;
+    padding: 2.6rem 1.4rem 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .imageBox {
+    min-height: 150px;
+
+    img {
+      max-height: 145px;
+    }
+  }
+
+  .content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .description {
+    margin-top: 1rem;
+  }
+
+  .detailsLink {
+    margin-bottom: 1rem;
+  }
+
+  .actions {
+    max-width: 330px;
+  }
+
+  .primaryButton {
+    min-width: 0;
+  }
+}

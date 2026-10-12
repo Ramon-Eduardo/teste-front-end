@@ -1,31 +1,44 @@
-# Teste Econverse: Vaga Desenvolvedor Front-End
+# Econverse Front-End Test
 
-### Vem ser #Econverse!
+Projeto em Next.js com TypeScript e Sass para montar uma vitrine de produtos seguindo o desafio da Econverse.
 
-Segue abaixo as instruções para a execução do teste.
+## Requisitos
 
-## Instruções
-- Faça um fork desse projeto para a sua conta pessoal do GitHub.
-- Desenvolva a página conforme as **Especificações Técnicas** 
-- Crie um README com as instruções para compilar, testar e rodar o projeto.
-- O link do repositório deverá ser enviado para o e-mail gustavo.cipriano@econverse.com.br com o título **Teste Vaga FrontEnd**
+Tenha o Node.js e o npm instalados.
 
-## Especificações Técnicas
-- Desenvolver a pagina em React e TypeScript conforme o [layout](https://www.figma.com/file/rWnzPeoxgynuNPsJjV0VmV/Teste-Front-End-Jr?node-id=0%3A1). Para conseguir pegar os elementos do Figma, basta copiar o layout para sua conta que terá acesso de edição.
-- Montar a [vitrine](https://app.econverse.com.br/teste-front-end/junior/tecnologia/layout/vitrine-produtos.png) de produtos consumindo as informações dos produtos em json atraves desse [Link](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json).
-- Desenvolver a interação ao clicar em um produto conforme layout. A interação consiste em abrir um modal com as principais informações do produto presente no arquivo [JSON](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json) conforme o produto que clicar.
-- Utilizar Pré-processador Sass, Less ou Stylus.
-- Respeitar o Layout pixel a pixel, tamanho das fontes, cores e botões.
-- Não Utilizar bibliotecas UI como Bootstrap, Foundation, ou afins.
+## Como rodar localmente
 
-## Pontos Extras
-- Utilizar Boas práticas de SEO
-- Uso de HTML semântico
+Os comandos devem ser executados na pasta `teste-front-end-ramon`, onde está o `package.json`:
 
-## O que avaliaremos em seu teste
-- Organização do projeto
-- Lógica do código
-- Componentização
-- Alcance dos objetivos propostos
+```bash
+cd teste-front-end-ramon
+```
 
-**Boa sorte! ;)**
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+2. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+3. Abra no navegador:
+   ```bash
+   http://localhost:3000
+   ```
+
+## Scripts disponíveis
+
+- `npm run dev` — inicia em modo de desenvolvimento
+- `npm run build` — compila a aplicação para produção
+- `npm run start` — inicia a aplicação compilada (execute `npm run build` antes)
+- `npm run lint` — verifica o código com ESLint
+
+## Observações
+
+- A página busca os produtos no [JSON da Econverse](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json). Se a consulta falhar ou não retornar produtos, exibe uma lista local de produtos de exemplo.
+- Clicar em um produto abre um modal com seus detalhes; ele pode ser fechado pelo botão, clicando fora ou pressionando `Esc`.
+- A estilização foi feita com módulos Sass (`.module.scss`).
+- O layout se adapta a telas menores, reorganizando as categorias e permitindo rolagem horizontal nos menus e na vitrine de produtos.
